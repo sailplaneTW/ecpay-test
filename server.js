@@ -1,4 +1,3 @@
-
 var express = require('express');
 var bodyParser =  require('body-parser');
 
@@ -9,7 +8,7 @@ var app = express();
 app.use(bodyParser.json()); // add a middleware (so that express can parse request.body's json)
 
 app.get('/', function (req, res) {
-  es.send('Hello World!')
+  res.send('Hello World!')
 });
 
 app.post('/', function(req, res) {

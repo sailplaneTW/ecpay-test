@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <form id="__ecpayForm" method="post" target="_self" action="https://logistics-stage.ecpay.com.tw/Express/map">
+        <input type="hidden" name="MerchantID" value='2000132' />
+        <input type="hidden" name="MerchantTradeNo" value='RevtelTech0001' />
+        <input type="hidden" name="LogisticsType" value="CVS" />
+        <input type="hidden" name="LogisticsSubType" value="UNIMART" />
+        <input type="hidden" name="IsCollection" value="N" />
+        <input type="hidden" name="ServerReplyURL" value='https://ecpay-test.revteltech.com/' />
+    </form>
+    <script type="text/javascript">
+        document.getElementById("__ecpayForm").submit();
+    </script>
+</body>
+
+</html>
