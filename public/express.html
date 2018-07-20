@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <form id="__ecpayForm" method="post" target="_self" action="https://logistics-stage.ecpay.com.tw/Express/Create">
+        <input type="hidden" name="MerchantID" value='2000132' />
+        <input name="MerchantTradeNo" value='RevtelTech0001' />
+        <input type="hidden" name="MerchantTradeDate" value='2018/07/20 11:11:11' />
+        <input type="hidden" name="LogisticsType" value="CVS" />
+        <input type="hidden" name="LogisticsSubType" value="UNIMARTC2C" />
+        <input type="hidden" name="GoodsAmount" value="200" />
+        <input type="hidden" name="CollectionAmount" value="200" />
+        <input type="hidden" name="IsCollection" value="N" />
+        <input type="hidden" name="SenderName" value="黃" />
+        <input type="hidden" name="ReceiverName" value="忻旅" />
+        <input type="hidden" name="ReceiverStoreID" value="991182" />
+        <input type="hidden" name="" value="" />
+        <input type="hidden" name="CheckMacValue" value="" />
+        <input type="hidden" name="ServerReplyURL" value='https://ecpay-test.revteltech.com/' />
+        <input type="submit">
+    </form>
+    <script type="text/javascript">
+        Number.prototype.padLeft = function(base,chr){
+            var  len = (String(base || 10).length - String(this).length)+1;
+            return len > 0? new Array(len).join(chr || '0')+this : this;
+         }
+             
+               var d = new Date,
+               dformat = [ d.getFullYear(),(d.getMonth()+1).padLeft(),
+                           d.getDate().padLeft(),
+                           ].join('/')+
+                           ' ' +
+                         [ d.getHours().padLeft(),
+                           d.getMinutes().padLeft(),
+                           d.getSeconds().padLeft()].join(':');
+        document.getElementById('MerchantTradeDate').value = dformat
+        document.getElementById("MerchantTradeNo").value = 'RevtelTech-'+Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10);
+    </script>
+</body>
+
+</html>
