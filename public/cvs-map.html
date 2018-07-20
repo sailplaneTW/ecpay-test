@@ -15,6 +15,7 @@
         <input type="hidden" name="ServerReplyURL" value='https://ecpay-test.revteltech.com/' />
     </form>
     <script type="text/javascript">
+        document.getElementById("mytext").value = 'RevtelTech-'+Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10);
         document.getElementById("__ecpayForm").submit();
     </script>
 </body>
