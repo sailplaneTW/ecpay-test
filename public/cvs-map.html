@@ -8,11 +8,11 @@
 <body>
     <form id="__ecpayForm" method="post" target="_self" action="https://logistics-stage.ecpay.com.tw/Express/map">
         <input type="hidden" name="MerchantID" value='2000132' />
-        <input type="hidden" name="MerchantTradeNo" value='RevtelTech0001' />
+        <input type="hidden" id='MerchantTradeNo' name="MerchantTradeNo" value='RevtelTech0001' />
         <input type="hidden" name="LogisticsType" value="CVS" />
         <input type="hidden" name="LogisticsSubType" value="UNIMART" />
         <input type="hidden" name="IsCollection" value="N" />
-        <input type="hidden" name="ServerReplyURL" value='https://ecpay-test.revteltech.com/' />
+        <input type="hidden" name="ServerReplyURL" value='http://172.20.10.14:8295/' />
     </form>
     <script type="text/javascript">
         document.getElementById("MerchantTradeNo").value = 'RevtelTech-'+Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10);
